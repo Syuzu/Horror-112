@@ -1,5 +1,9 @@
 # Horror-112
+Web Development Project
 
-Basic layout mockup\
-Website is not reactive currently\
-Please view at 1920x1080 resolution
+# Progress
+Current State: Not reactive, 1920x1080
+
+Basic layout with css done
+Color scheme and fonts TBD
+Need to make responsive for small displays
