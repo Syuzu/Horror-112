@@ -1,5 +1,6 @@
 # Horror-112
-Web Development Project\
+Web Development Project
+
 Events Slideshow interval (edit in events.js): 10s \
 Rides and Attractions Slideshow interval (edit in attractions.js): 10s 
 
