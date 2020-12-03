@@ -1,5 +1,7 @@
 # Horror-112
-Web Development Project
+Web Development Project\
+Events Slideshow interval (edit in events.js): 10s \
+Rides and Attractions Slideshow interval (edit in attractions.js): 10s 
 
 # Progress
 Current State: Not reactive, 1920x1080
