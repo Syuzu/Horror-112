@@ -1,66 +1,65 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <title>Horror 112</title>
-        <meta charset = "UTF-8">
-        <link rel = "shortcut icon" type = "image/png" href = "icons/favicon.png">
-        <link rel = "stylesheet" href = "css/homepage.css">
-        <meta name = "keywords" content = "horror, theme park, amusment park, ">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="horror, theme park, amusment park, park, fun, entertainment">
+        <meta name="HandheldFriendly" content="true">
+
+        <link rel="shortcut icon" type="image/png" href="img/icons/logo.png">
+        <link rel="stylesheet" href="css/index.css">
+
+        <script src="https://kit.fontawesome.com/a23527af05.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <!--Header and Navigation Bar-->
-        <header>
-            <div class = "top-header-section">
-                <div class = "top-header-container">
-                    <div>
-                        <a id = "header-logo" href ="#">
-                            <img draggable = "false" src = "img/Logo.png" alt = "Horror 112" class = "responsive">
+        <!--Header-->
+        <div class="header-container col-12">
+            <div class="header col-10">
+                <div class="headerlogo-container col-4">
+                    <div id="headerlogo">
+                        <a href="#">
+                            <img src="img/icons/logo.png" alt="HORROR 112" id="headerlogoimage" draggable="false">
                         </a>
+                    </div>
+                </div>
 
-                        <div class = "header-utilities" style="float: right;">
-                            <!--Language Bar-->
-                            <div class = "dropdown">
-                                <button onclick = "clickLanguage()" class = "clickdropbtn">English
-                                    <i class = "fa fa-angle-down"></i></button>
-                                <div id = "language" class = "clickdropdown-content">
-                                    <a href = "#">中文简体字</a>
-                                    <a href = "#">日本語</a>
-                                </div>
-                            </div>
-                            <!--Opening Hours-->
-                            <div class = "openinghours" style = "float: right; color: #FAFAFA;">
-                                <p>
-                                    Opening Hours for Today 14:00PM - 23:00PM
-                                </p>
-                            </div>
-                            <!--Temperature Reading-->
-                            <div class = "temperature-value" style = "float: right;">
-                                <p class = "">- °<span class = "g">c</span></p>
-                            </div>
-                            <!--Weather Widget-->
-                            <div class = "weather-widget" style = "float: right;">
-                                <div class = "weather-icon">
-                                    <img src = "icons/weather/unknown.png" />
-                                </div>
-                            </div>  
+                <div class="headerutilities-container col-8">
+                    <a href="#" class="headermsg">
+                        <p>
+                            Opening Hours for Today <u>14:00PM - 23:00PM</u>
+                        </p>
+                    </a>
+
+                    <div class="weather">
+                        <div class = "weather-icon">
+                            <img src = "img/weather/unknown.png">
+                        </div>
+
+                        <div class = "temperature-value">
+                            <p class = "">- °<span class = "g">c</span></p>
                         </div>
                     </div>
                 </div>
+                
             </div>
-            <div class = "bottom-header-section" id = "navScroll" style = "z-index: 1;">
-                <div class = "bottom-header-container">
+        </div>
 
-                    <a id = "nav-logo" href = "#">
-                        <img id = "navLogo" src = "img/Logo.png" alt = "Logo">
-                    </a>
-                    <nav class = "main-nav" style = "float: left;">
-                        <div class = "dropdown" id = "ThingsToDo">
-                            <button class = "dropbtn">THINGS TO DO
-                                <i class = "fa fa-angle-down"></i></button>
-                            <div class = "dropdown-content">
+        <!--Navigation Bar (Desktop)-->
+        <div class="navbar-container col-12" id="navigationbar">
+            <div class="navbar col-10">
+                <div class="navleft-container col-8">
+                    <nav class="navigation-container">
+                        <a href="#" id="navbarlogo-container">
+                            <img src="img/icons/logo.png" alt="LOGO" id="navbar-logo" draggable="false">
+                        </a>
+
+                        <div class="dropdown col-2" id="thingstodo">
+                            <button class="dropdownbtn">THINGS TO DO <i class="fa fa-angle-down"></i></button>
+                            <div class="dropdown-content">
                                 <a href = "#">Rides and Attractions</a>
                                 <a href = "#">Dining</a>
                                 <a href = "#">Shopping</a>
@@ -68,10 +67,10 @@
                                 <a href = "#">Events and Seasonal Activities</a>
                             </div>
                         </div>
-                        <div class = "dropdown" id = "PlanYourVisit">
-                            <button class = "dropbtn">PLAN YOUR VISIT
-                                <i class = "fa fa-angle-down"></i></button>
-                            <div class = "dropdown-content">
+
+                        <div class="dropdown col-2" id="planyourvisit">
+                            <button class="dropdownbtn">PLAN YOUR VISIT <i class="fa fa-angle-down"></i></button>
+                            <div class="dropdown-content">
                                 <a href = "#">Park Highlights</a>
                                 <a href = "#">Calendar and Hours</a>
                                 <a href = "#">Park Map</a>
@@ -79,301 +78,257 @@
                                 <a href = "#">Operations and Safety Updates</a>
                             </div>
                         </div>
-                        <div class = "dropdown" id = "Special Offers">
-                            <button class = "dropbtn">SPECIAL OFFERS
-                                <i class = "fa fa-angle-down"></i></button>
-                            <div class = "dropdown-content">
+
+                        <div class="dropdown col-2" id="specialoffers">
+                            <button class="dropdownbtn">SPECIAL OFFERS <i class="fa fa-angle-down"></i></button>
+                            <div class="dropdown-content">
                                 <a href = "#">Ticket Deals</a>
                                 <a href = "#">VIP Experience</a>
                                 <a href = "#">Credit Card Rebates</a>
                             </div>
                         </div>
                     </nav>
-
-                    <!--
-                        <button id = "search" style = "float: right;">
-                        <i class = "fa fa-search fa-2x"></i>
-                    </button>-->
-                    
-                    
-                    
-                    <button id = "buynow" style = "float: right;">
-                        <a href = "#" id = "buynowtext" style="text-decoration: none">Buy Tickets and Passes</a>
-                    </button>
-
-                    <div class = "search-container" style = "float: right;">
-                        <input type = "text" placeholder = "Search.." name = "search">
-                    </div>
-                    <!--<a href = "#" style = "float: right;">
-                        <button id = "buynow" style = "text-decoration: none;">Buy Tickets and Passes</button>
-                    </a>-->
                 </div>
-            </div>
-        </header>
+                <div class="navright-container col-4">
+                    <div class="dropsearch">
+                        <button onclick="togglesearch()" class="dropsearchbtn">&#8981;</button>
 
-        <!--Main Content-->
-        <div class="EventContainer">
-            <a href = "#"><img class="EventSlides" src = "img/events/hhn.jpg" alt = "Event 1"></a>
-            <a href = "#"><img class="EventSlides" src = "img/events/paqui.png" alt = "Event 2"></a>
-            <a href = "#"><img class="EventSlides" src = "img/events/zombierun.jpg" alt = "Event 3"></a>
+                        <div id="dropdownsearch" class="dropdownsearch-content">
+                            <div class="searchbar-container col-10">
+                                <input type="text" placeholder="Horror 112&#8482;" id="searchinput">
+                                <p id="search">Search</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <span id ="leftSlideArrow" class="EventArrow">&#10094;</span>
-            <span id ="rightSlideArrow" class="EventArrow">&#10095;</span>
-
-            <div class="EventCircles">
-                <span class="slidecircle slidedot"></span>
-                <span class="slidecircle"></span>
-                <span class="slidecircle"></span>
-            </div>
+                    <div class="buynow-container col-5">
+                        <a href="#">
+                            <button class="buynowbtn">BUY TICKETS AND PASSES</button>
+                        </a>
+                    </div>
+                </div>
+            </div>            
         </div>
 
-        <h1>Spotlight</h1>
-        <div class = "spotlightcontainer">
-            <div class = "spotlightslot">
-                <div class = "spotlightslide">
-                    <img class = "spotlightimage" src = "img/spotlight/biohazard.jpg" alt = "BIOHAZARD Cafe & Grill S.T.A.R.S.">
-                    <div class = "spotlightinfo">
-                        <a href = "#" style = "text-decoration: none;"><h2>BIOHAZARD Cafe & Grill S.T.A.R.S.</h2></a>
-                        Visit this  time-limited Resident Evil-themed restaurant originating 
-                        from the Shibuya Parco department store in Tokyo's Shibuya ward.</br></br>
-                        Mininum group of 2.
+        <!--Navigation Bar (Mobile)-->
+        <div class="mnavbar-container col-m-12">
+            <div class="mdropsearch">
+                <button onclick="mtogglesearch()" class="mdropsearchbtn">&#8981;</button>
+
+                <div id="mdropdownsearch" class="mdropdownsearch-content">
+                    <div class="msearchbar col-m-11">
+                        <input type="text" placeholder="Search Horror 112&#8482;" id="msearchinput">
                     </div>
                 </div>
             </div>
-            <div class = "spotlightslot">
-                <div class = "spotlightslide">
-                    <img class = "spotlightimage" src = "img/spotlight/conan.png" alt = "Detective Conan: The Escape">
-                    <div class = "spotlightinfo">
-                        <a href = "#" style = "text-decoration: none;"><h2>Detective Conan: The Escape</h2></a>
-                        Join Conan and his companions in the next Case Closed escape game.</br></br>
-                        The live performances will be bigger, the puzzles will be more perplexing, 
-                        and best of all – you get the chance to be part of an original story in the Case Closed universe.
-                    </div>
-                </div>
-            </div>
-            <div class = "spotlightslot">
-                <div class = "spotlightslide">
-                    <img class = "spotlightimage" src = "img/spotlight/vr.jpg" alt = "Reiko's Fragments">
-                    <div class = "spotlightinfo">
-                        <a href = "#" style = "text-decoration: none;"><h2>Reiko's Fragments</h2></a>
-                        In this VR vs Crowd game, the VR player must escape a haunted house, a vengeful ghost and even worse, 
-                        their friends playing as spirits who have full control over the house they're trying to escape!
-                    </div>
-                </div>
-            </div>
-            <div class = "spotlightslot">
-                <div class = "spotlightslide">
-                    <img class = "spotlightimage" src = "img/spotlight/chernobyl.jpg" alt = "Chernobyl">
-                    <div class = "spotlightinfo">
-                        <a href = "#" style = "text-decoration: none;"><h2>Explore the wastelands of Chernobyl</h2></a>
-                        Chernobyl is the most famous Ukrainian phenomenon. If you plan to visit Ukraine or are already in the country, 
-                        don’t miss the most important and unique experience and site.
-                    </div>
-                </div>
-            </div>
-        </div>    
-        
-        <h1>Rides and Attractions</h1>
-        <div class = "slideshow-container">
-            <div class = "slideshow-inner">
-                
 
-                <div class = "mySlides fade">
-                    <img class = "attractionImage" src='img/attractions/walkingdead.jpg' style='width: 100%;' alt="The Walking Dead Attraction"/>
-                    <div class = "text">
-                        <a href = "#">The Walking Dead Attraction</a></br>
-                        Die-hard fans of The Walking Dead or simply those who love a good scare 
-                        can now live through a zombie apocalypse. Once a seasonal event, it has now received a major upgrade 
-                        and a permanent year-round location near the park's entrance.
-                    </div>
-                </div>
+            <a href="#" id="mnavlogo">
+                <img src="img/icons/logo.png" alt="LOGO" id="mnavimage" draggable="false">
+            </a>
 
-                <div class = "mySlides fade">
-                    <img class = "attractionImage" src='img/attractions/mummy.jpg' style='width: 100%;' alt="Revenge of the Mummy"/>
-                    <div class = "text">
-                        <a href = "#">Revenge of the Mummy</a></br>
-                        Plagued on all sides by huge fireballs, swarms of scarab beetles and an army of warrior mummies, 
-                        all in total darkness. Can you survive the awesome power of Imhotep’s curse or 
-                        will you be entombed inside forever.
-                    </div>
-                </div>
+            <!--Sidebar-->
+            <div class="sidebar-container" id="sidebarcontainer">
+                <span id="sidebarbtn" onclick="opensidebar()">&#9776;</span>
 
-                <div class = "mySlides fade">
-                    <img class = "attractionImage" src='img/attractions/sslof.jpg' style='width: 100%;' alt="Super Scary Labyrinth of Fear"/>
-                    <div class = "text">
-                        <a href = "#">Super Scary Labyrinth of Fear</a></br>
-                        One of the world's largest Horror attraction Attraction, 
-                        recognized by the Guinness Book of World Records at the time of its opening for its walking distance,
-                        which has evolved many times and given fear to over 4 million people. 
-                    </div>
-                </div>
+                <div id="sidebar" class="sidebar-overlay">
+                    <a href="javascript:void(0)" id="closesidebarbtn" onclick="closesidebar()">&times;</a>
+                    
+                    <div class="sidebar-content">
+                        <button class="sidemenubtn">Buy Tickets and Passes</button>
+                        <div class="sidebarpanel">
+                            <div class="sidebarlink">
+                                <a href="#">Tickets</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Season Pass</a>
+                            </div>
+                        </div>
 
-                <div class = "mySlides fade">
-                    <img class = "attractionImage" src='img/attractions/hotel.jpg' style='width: 100%;' alt="Hotel Universal Port"/>
-                    <div class = "text">
-                        <a href = "#">Hotel Universal Port</a></br>
-                        Try not to freak out while you hunt for clues in the room to solve the mystery of a missing girl.
-                    </div>
-                </div>
+                        <button class="sidemenubtn">Things to Do</button>
+                        <div class="sidebarpanel">
+                            <div class="sidebarlink">
+                                <a href="#">Rides and Attractions</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Dining</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Shopping</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Entertainment</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Events and Seasonal Activities</a>
+                            </div>
+                        </div>
 
-                <div class = "mySlides fade">
-                    <img class = "attractionImage" src='img/attractions/takabisha.jpg' style='width: 100%;' alt="Takabisha"/>
-                    <div class = "text">
-                        <a href = "#">Takabisha</a></br>
-                        A large roller coaster born in July 2011. All experiences such as sudden acceleration by linear motor, 
-                        seven twists (rotations), falling sharply with a maximum drop angle of 121 degrees, 
-                        sudden rise while looking at the sky, temporary stop in fall position, etc. 
-                        "Takabisha - Steepest Roller Coaster".
-                    </div>
-                </div>
+                        <button class="sidemenubtn">Plan Your Visits</button>
+                        <div class="sidebarpanel">
+                            <div class="sidebarlink">
+                                <a href="#">Park Highlights</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Calendar and Hours</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Park Map</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Directions and Parking</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Operations and Safety Updates</a>
+                            </div>
+                        </div>
+                        
+                        <button class="sidemenubtn">Special Offers</button>
+                        <div class="sidebarpanel">
+                            <div class="sidebarlink">
+                                <a href="#">Ticket Deals</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">VIP Experience</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Credit Card Rebates</a>
+                            </div>
+                        </div>
 
-                <a id ="leftArrow" class="prev" onclick='plusSlides(-1)'>&#10094;</a>
-                <a id ="rightArrow"   class="next" onclick='plusSlides(1)'>&#10095;</a>
-
-                <div  class = "attractionCircles">
-                    <span class="dot" onclick='currentSlide(1)'></span>
-                    <span class="dot" onclick='currentSlide(2)'></span>
-                    <span class="dot" onclick='currentSlide(3)'></span>
-                    <span class="dot" onclick='currentSlide(4)'></span>
-                    <span class="dot" onclick='currentSlide(5)'></span>
-                </div>
-            </div>
-        </div>
-        
-        <hr style = "margin-top: 20px;">
-
-        <h1>Find Your Nightmare</h1>
-        <div class = "FYNcontainer">
-            <div class = "FYNslot">
-                <div class = "FYNslide" style = "background-color: red;">
-                    <img class = "FYNimage" src = "img/findyournightmare/atots.jpeg" alt = "A Tale of Two Sisters">
-                    <div class = "FYNinfo">
-                        <a href = "#">FAMILY FUN &#10095;</a>
-                    </div>
-                </div>
-            </div>
-            <div class = "FYNslot">
-                <div class = "FYNslide" style = "background-color: darkblue;">
-                    <img class = "FYNimage" src = "img/findyournightmare/saw.png" alt = "Saw Group Trap">
-                    <div class = "FYNinfo">
-                        <a href = "#">GROUP ADVENTURES &#10095;</a>
-                    </div>
-                </div>
-            </div>
-            <div class = "FYNslot">
-                <div class = "FYNslide" style = "background-color: purple;" alt = "skyscraper">
-                    <img class = "FYNimage" src = "img/findyournightmare/skyscraper.png">
-                    <div class = "FYNinfo">
-                        <a href = "#">THRILL SEEKERS &#10095;</a>
+                        <button class="sidemenubtn">Theme Park Hours</button>
+                        <div class="sidebarpanel">
+                            <div class="sidebarlink">
+                                <a href="#">Theme Park Hours</a>
+                            </div>
+                            <div class="sidebarlink">
+                                <a href="#">Weather</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!--Place content here-->
+        <div class="content"></div>
+
         <!--Footer-->
-        <div class = "footercontainer">
-            <div class = "StayInTheKnow">
-                <img id = "sitkImage" src = "img/footer/stayintheknow.jpg" alt = "Stay In The Know">
-                <p class = "sitktext">
-                    <b>Stay in The Know</b></br></br>
-                    When you sign up for emails, you'll get special offers, early news notifications, and much more.
-                </p>
-                <a href = "#">
-                    <button id = "signupbtn">
-                        SIGN UP
-                    </button>
-                </a>
-                
+        <div class="footer-container">
+            <div class="sitk-container col-9 col-m-11">
+                <div class="sitkimage-container col-4 col-m-12">
+                    <img id="sitkimage" src="img/footer/stayintheknow.jpg">
+                </div>
 
+                <div class="sitkmessage-container col-6 col-m-9">
+                    <div class="sitkheader">Stay In The Know</div>
+                    <div class="sitkmessage">When you sign up for emails, you'll get special offers, 
+                        early news notifications, and so much more!</div>
+                </div>
+
+                <div class="sitkbutton-container col-2 col-m-3">
+                    <button id="sitkbutton">SIGN UP</button>
+                </div>
             </div>
 
-            <hr>
+            <hr class="footerdivider col-11 col-m-12">
 
-            <div class = "SocialMedia">
-                <button id = "likebtn">
-                    <i style="font-size:15px" class="fa">&#xf087;</i> Like
-                </button>
-               <b id = "likemsg">Like us on Facebook</b>
-               <b id = "connectmsg">Connect With Us
-                   <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-                   <a href="https://twitter.com/" class="fa fa-twitter"></a>
-                   <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-                   <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
-                </b>
+            <div class="socialmedia-container col-10 col-m-11">
+                <div class="like-container col-6 col-m-12">
+                    <span class="likemsg">Like us on Facebook</span>
+
+                    <button class="fblikebtn"><i class="far fa-thumbs-up"></i> Like</i></button>
+                </div>
+
+                <div class="connect-container col-6 col-m-12">
+                    <span class="connectmsg">
+                        Connect With Us
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>                       
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://web.telegram.org/" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://line.me/" target="_blank"><i class="fab fa-line"></i></a>
+                    </span>
+                </div>
             </div>
 
-            <hr>
+            <hr class="footerdivider col-11 col-m-12">
 
-            <div class = "misc">
-                <table id = "misctable">
-                    <tr>
-                      <td class = "misclink"><a href = "#">About Us</a></td>
-                      <td class = "misclink"><a href = "#">For Groups of 10+</a></td>
-                      <td class = "misclink"><a href = "#">Meetings and Events</a></td>
-                    </tr>
-                    <tr>
-                      <td class = "misclink"><a href = "#">FAQs</a></td>
-                      <td class = "misclink"><a href = "#">Corporate Partners</a></td>
-                      <td class = "misclink"><a href = "#">Community Relations</a></td>
-                    </tr>
-                    <tr>
-                      <td class = "misclink"><a href = "#">Sign Up for Email Alerts</a></td>
-                      <td class = "misclink"><a href = "#">Youth and Education</a></td>
-                      <td class = "misclink"><a href = "#">Media Relations</a></td>
-                    </tr>
-                    <tr>
-                      <td class = "misclink"><a href = "#">Ticket Deals</a></td>
-                      <td class = "misclink"><a href = "#">Jobs</a></td>
-                      <td class = "misclink"><a href = "#">Safety and Travel Updates</a></td>
-                    </tr>
-                  </table>
+            <div class="language-container col-10 col-m-11">
+                <ul class="languages">
+                    <li>Español</li>
+                    <li>Italiano</li>
+                    <li>Français</li>
+                    <li>Português</li>
+                    <li>Deutsch</li>
+                    <li>Polski</li>
+                    <li>简体中文</li>
+                    <li>繁體中文</li>
+                    <li>한국어</li>
+                    <li>日本語</li>
+                    <li>தமிழ்</li>
+                    <li>اَلْعَرَبِيَّةُ</li>
+                </ul>
             </div>
-            
-            <hr>
 
-            <div class = "disclaimer">
-                <div class = "copyright">
-                    <p id = "copyrightmsg">
-                        &#169; 2020 Horror 112. All rights reserved. <br>
+            <hr class="footerdivider col-11 col-m-12">
+
+            <div class="misc-container col-10 col-m-12">
+                <ul class="misc col-4 col-m-11">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Sign Up for Email Alerts</a></li>
+                    <li><a href="#">Ticket Deals</a></li>
+                    <li><a href="#">Jobs</a></li>
+                </ul>
+
+                <ul class="misc col-4 col-m-11">
+                    <li><a href="#">For Groups of 10+</a></li>
+                    <li><a href="#">Corporate Partners</a></li>
+                    <li><a href="#">Youth and Education</a></li>
+                    <li><a href="#">Military Sales</a></li>
+                    <li><a href="#">Merchandise and Shops</a></li>
+                </ul>
+
+                <ul class="misc col-4 col-m-11">
+                    <li><a href="#">Meetings and Events</a></li>
+                    <li><a href="#">Green is Universal</a></li>
+                    <li><a href="#">Community Relations</a></li>
+                    <li><a href="#">Media Relations</a></li>
+                    <li><a href="#">Safety & Travel Updates</a></li>
+                </ul>
+            </div>
+
+            <hr class="footerdivider col-11 col-m-12">
+
+            <div class="legal-container col-10 col-m-12">
+                <div class="disclaimer col-3 col-m-11">
+                    <div class="copyright">
+                        &#169; 2020 Horror 112. All rights reserved.
                         Some imagery shown throughout our website does not represent current operational and safety guidelines.
-                    </p>
+                    </div>
                 </div>
 
-                <div class = "legal">
-                    <table id = "legaltable">
-                        <tr>
-                          <td class = "legallink"><a href = "#">Copyright and Trademark &#10093;</a></td>
-                          <td class = "legallink"><a href = "#">Terms of Service &#10093;</a></td>
-                          <td class = "legallink"><a href = "#">Privacy Policy &#10093;</a></td>
-                          <td class = "legallink"><a href = "#">SG Notice &#10093;</a></td>
-                          <td class = "legallink"><a href = "#">Do Not Sell My Personal Information &#10093;</a></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td class = "legallink"><a href = "#">Privacy Information Center &#10093;</a></td>
-                          <td class = "legallink"><a href = "#">Accessibility Information &#10093;</a></td>
-                        </tr>
-                      </table>
-                </div>
+                <ul class="legal col-9 col-m-11">
+                    <li class="legallink"><a href="#">Copyright & Trademark &#10093;</a></li>
+                    <li class="legallink"><a href="#">Terms of Service &#10093;</a></li>
+                    <li class="legallink"><a href="#">Privacy Policy &#10093;</a></li>
+                    <li class="legallink"><a href="#">SG Notice &#10093;</a></li>
+                    <li class="legallink"><a href="#">Do Not Sell My Personal Information &#10093;</a></li>
+                    <li class="legallink"><a href="#">Privacy Information Center &#10093;</a></li>
+                    <li class="legallink"><a href="#">Accessibility Information &#10093;</a></li>
+                </ul>
             </div>
         </div>
-
-        <footer></footer>
-        
-        <script src = "js/weather.js"></script>
-        <script src = "js/language.js"></script>
-        <script src = "js/events.js"></script>
-        <script src = "js/attractions.js"></script>
-        <script src = "js/navscroll.js"></script>
-        
     </body>
 
-    <!--Go to Top When Refresh-->
-    <script>
-    window.onbeforeunload = function(){
-        window.scrollTo(0, 0);
-    }; 
-    </script>
-</html>
+    <footer>
+        HORROR 112 
+    </footer>
 
+    <script src = "js/search.js"></script>
+    <script src = "js/navbar.js"></script>
+    <script src = "js/sidebar.js"></script>
+    <script src = "js/weather.js"></script>
+
+</html>
