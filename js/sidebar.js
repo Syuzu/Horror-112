@@ -37,10 +37,12 @@ function mclosesearchbar(targetwidth) {
 
 function opensidebar() {
     document.getElementById("sidebar").style.width = "100%";
+    document.body.style.overflow = "hidden";
 }
 
 function closesidebar() {
     document.getElementById("sidebar").style.width = "0%";
+    document.body.style.overflow = "";
 }
 
 var acc = document.getElementsByClassName("sidemenubtn");
