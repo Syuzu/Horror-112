@@ -364,19 +364,22 @@ body{
 }
 
 .sidebar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: auto;
     height: 100%;
     position: absolute;
     right: 10px;
+    border: blueviolet solid;
 }
 
 #sidebarbtn {
     font-size: 2.5rem;
-    color: #FAFAFA;
+    color: #E0E0E0;
     cursor: pointer;
     position: absolute;
     right: 0;
-    margin-top: 3px;
 }
 
 .sidebar-overlay {
