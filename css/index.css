@@ -376,10 +376,11 @@ body{
 
 #sidebarbtn {
     font-size: 2.5rem;
-    color: #E0E0E0;
+    color: white;
     cursor: pointer;
     position: absolute;
     right: 0;
+    border: red solid;
 }
 
 .sidebar-overlay {
@@ -389,7 +390,7 @@ body{
     z-index: 10;
     top: 0;
     right: 0;
-    background-color: #424242;
+    background-color: red;
     overflow: auto;
     transition: 0.5s;
 }
