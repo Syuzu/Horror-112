@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Horror 112</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" type="image/png" href="img/icons/logo.png">
+        <link rel="stylesheet" href="css/horror.css">
+
+        <script src="https://kit.fontawesome.com/a23527af05.js" crossorigin="anonymous"></script>
+        
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <!--Header-->
+            <div class="row d-none d-lg-block" id="headercontainer">
+                <header class="d-flex align-items-center col-xl-10 col-lg-11 col-12 m-auto">
+                    <!--Header Logo-->
+                    <a class="d-flex align-items-center" href="index.html">
+                        <img src="img/icons/logo.png" alt="HORROR 112" id="headerlogo">
+                    </a>
+
+                    <!--Header Name-->
+                    <a class="d-flex align-items-center" href="index.html" id="headername">
+                        HORROR 112
+                    </a>
+                    
+                    <!--Header Utilities-->
+                    <div class="d-flex align-items-center ml-auto" id="headerutilities">
+                        <div class = "weather-icon">
+                            <img src = "img/icons/weather/unknown.png" alt="weather icon">
+                        </div>
+
+                        <div class = "temperature-value">
+                            <p class = "" id="temperaturevalue">- °<span class = "g">c</span></p>
+                        </div>
+
+                        <p class="nopadding" id="openinghours">
+                            Opening Hours for Today <u>14:00PM - 23:00PM</u>
+                        </p>
+                    </div>
+
+                    <div>
+                        
+                    </div>
+                </header>
+            </div>
+
+            <!--Navigation Bar-->
+            <div class="row bg-dark sticky-top" id="navbarcontainer">
+                <nav class="navbar navbar-expand-lg navbar-dark col-xl-10 col-lg-11 col-12 m-auto">
+                    <!--Logo in Navigation Bar (Hidden on Desktop)-->
+                    <a class="nav-brand" href="index.html">
+                        <img src="img/icons/logo.png" alt="112" id="navbarimage">
+                    </a>
+
+                    <!--Dropdown content that does not collapse-->
+                    <div class="d-flex order-lg-1 ml-auto">
+                        <div class="nav-item dropdown d-block iconbtn">
+                            <a href="#" class="nav-link btn-dark" data-toggle="dropdown">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <form class="form-inline">
+                                    <input class="form-control" type="search" id="searchbar" placeholder="Search" aria-label="Search">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="nav-item dropdown d-block iconbtn">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#loginModal">
+                                <i class="fas fa-user"></i>
+                            </button>
+                        </div>
+
+                        <div class="nav-item dropdown d-block iconbtn">
+                            <a href="#" class="nav-link btn-dark" data-toggle="dropdown">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">Your shopping cart is empty.</a>
+                            </div>
+                        </div>
+
+                        <a class="nav-link d-none d-lg-block" href="#" id="buynow" style="color: #FAFAFA;">
+                            BUY TICKETS AND PASSES
+                        </a>                                         
+                    </div>
+
+                    <!--Dropdown button when navbar collapsed-->
+                    <button class="navbar-toggler" style="border: 0;" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!--Dropdown content that collapses-->
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown d-lg-none">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    BUY TICKETS AND PASSES
+                                </a>
+                                <div class="dropdown-menu">                                    
+                                    <a class="dropdown-item" href="#">Tickets</a>
+                                    <a class="dropdown-item" href="#">Season Pass</a>
+                                    <a class="dropdown-item" href="#">Express Ticket</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    THINGS TO DO
+                                </a>
+                                <div class="dropdown-menu">                                    
+                                    <a class="dropdown-item" href="#">Dining</a>
+                                    <a class="dropdown-item" href="#">Shopping</a>
+                                    <a class="dropdown-item" href="#">Entertainment</a>
+                                    <a class="dropdown-item" href="#">Rides and Attractions</a>
+                                    <a class="dropdown-item" href="#">Events and Seasonal Activities</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    PLAN YOUR VISIT
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Park Maps</a>
+                                    <a class="dropdown-item" href="#">Park Highlights</a>
+                                    <a class="dropdown-item" href="#">Calendar and Hours</a>                                    
+                                    <a class="dropdown-item" href="#">Directions and Parking</a>
+                                    <a class="dropdown-item" href="#">Operations and Safety Updates</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    SPECIAL OFFERS
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Ticket Deals</a>
+                                    <a class="dropdown-item" href="#">VIP Experience</a>
+                                    <a class="dropdown-item" href="#">Credit Card Rebates</a>
+                                    <a class="dropdown-item" href="#">SingapoRediscovers</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown d-lg-none">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    THEME PARK HOURS
+                                </a>
+                                <div class="dropdown-menu">                            
+                                    <a class="dropdown-item" href="#">Weather</a>        
+                                    <a class="dropdown-item" href="#">Opening Hours</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav> 
+            </div>
+
+            <!--User Login Modal (MUST be outside navigation bar container)-->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="userloginModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="loginModaltitle">Login</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="email" class="form-control" id="username" placeholder="Horror112@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+
+                            <div class="form-check">
+                                 <input type="checkbox" class="form-check-input" id="remembermecheck">
+                                 <label class="form-check-label" for="remembermecheck">
+                                    Remember me
+                                 </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-secondary" style="margin-top: 10px;">
+                                Sign in
+                            </button>
+                        </form>
+                        
+                        <div class="dropdown-divider"></div>
+                                                  
+                        <a class="dropdown-item" href="#">New around here? Sign up</a>                            
+                        <a class="dropdown-item" href="#">Forgot password?</a>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+
+            <!--Events-->
+            <div class="row" id="eventcontainer">
+                <div id="eventcarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!--Carousel Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#eventcarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#eventcarousel" data-slide-to="1"></li>
+                        <li data-target="#eventcarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!--Carousel Slides-->
+                    <!--set time per slide with data-interval (1000 = 1s)-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="5000"> 
+                            <img class="d-block w-100" src="img/events/hhn.jpg" alt="Event 1">
+                        </div>
+
+                        <div class="carousel-item" data-interval="5000">
+                            <img class="d-block w-100" src="img/events/paqui.png" alt="Event 2">
+                        </div>
+
+                        <div class="carousel-item" data-interval="5000">
+                            <img class="d-block w-100" src="img/events/zombierun.jpg" alt="Event 3">
+                        </div>
+                    </div>
+
+                    <!--Carousel Controls-->
+                    <a class="carousel-control-prev" href="#eventcarousel" role="button" data-slide="prev" id="previousevent">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+
+                    <a class="carousel-control-next" href="#eventcarousel" role="button" data-slide="next" id="nextevent">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <!--Buy Tickets Now Button (visible only on mobile)-->
+            <div class="row d-sm-none" id="buyticketsnowcontainer">
+                <div class="col-10 m-auto" id="buyticketsnow">
+                    <form style="display: inline" action="#" method="get">
+                        <button>BUY TICKETS NOW</button>
+                    </form>
+                </div>
+            </div>
+
+            <br>
+
+            <!--Spotlight-->
+            <h1 class="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 m-auto">Spotlight</h1>
+
+            <div class="row col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 m-auto nopadding" id="spotlightcontainer">
+                <!--Card 1-->
+                <input type="checkbox" id="card-1"/>
+                <label class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 card-container py-2 nopadding" for='card-1'>
+                    <div class="card-flip">
+                    <!--Card 1 Front-->
+                    <div class="card front border-0">
+                        <img src="img/spotlight/biohazard.jpg" class="card-img-top">
+                        <div class="card h-100">
+                            <h5 class="card-title">BIOHAZARD Cafe & Grill S.T.A.R.S.</h5>
+                            <p class="card-text">
+                                Visit this  time-limited Resident Evil-themed restaurant originating 
+                                from the Shibuya Parco department store in Tokyo's Shibuya ward.<br><br>
+                                Mininum group of 2.
+                            </p>                            
+                    </div>
+                    
+                    <div class="cardfooter card-footer">
+                        <small class="cardfootertext">Learn More...</small>
+                        <i class="flipcardicon fas fa-angle-right float-right"></i>
+                    </div>
+                    </div>
+                    <!--End Card 1 Front-->
+          
+                    <!--Card 1 Back-->
+                    <div class="card back">
+                        <div class="card-header">
+                            BIOHAZARD Cafe & Grill S.T.A.R.S.
+                        </div>
+                        <div class="card h-100">
+                            <p class="card-text">
+                                The Biohazard Cafe and Grill aims to transport diners into Raccoon City and the world of Resident Evil.<br><br>
+                                Besides the assorted RE artifacts that line the walls, there's a one-to-one scale Tyrant that was crafted 
+                                by the special effects house that creates the tokusatsu costumes for Toei's superheroes.
+                            </p>                            
+                        </div>
+                        <div class="card-footer">
+                            <form style="display: inline" action="#" method="get">
+                                <button class="getdetailsbtn">GET DETAILS</button>
+                            </form>
+                              
+                            <i class="flipcardicon fas fa-angle-left float-right"></i>
+                        </div>
+                        </div>
+                        <!--End Card 1 Back-->
+                    </div>
+                </label>
+                <!--End Card 1-->
+    
+                <!--Card 2-->
+                <input type="checkbox" id="card-2"/>
+                <label class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 card-container py-2 nopadding" for='card-2'>
+                    <div class="card-flip">
+                    <!--Card 2 Front-->
+                    <div class="card front border-0">
+                        <img src="img/spotlight/conan.png" class="card-img-top">
+                        <div class="card h-100">
+                            <h5 class="card-title">Detective Conan: The Escape</h5>
+                            <p class="card-text">
+                                Join Conan and his companions in the next Case Closed escape game.<br><br>
+                                The live performances will be bigger, the puzzles will be more perplexing,
+                                and remember - There Is Always Only One Truth!
+                            </p>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <small class="cardfootertext">Learn More...</small>
+                        <i class="flipcardicon fas fa-angle-right float-right"></i>
+                    </div>
+                    </div>
+                    <!--End Card 2 Front-->
+          
+                    <!--Card 2 Back-->
+                    <div class="card back">
+                        <div class="card-header">
+                            Detective Conan: The Escape
+                        </div>
+                        <div class="card h-100">
+                            <p class="card-text">
+                                The attraction takes place in a certain building where you face off against Conan’s greatest rival, 
+                                Kid the Phantom Thief, to find the lose treasure.<br><br> 
+                                You are split into groups and use 2 touch panels 
+                                while solving the riddles together with Conan.<br><br>
+                                Will you be able to find the treasure before Kid…?!
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <form style="display: inline" action="#" method="get">
+                                <button class="getdetailsbtn">GET DETAILS</button>
+                            </form>
+                            <i class="flipcardicon fas fa-angle-left float-right"></i>
+                        </div>
+                        </div>
+                        <!--End Card 2 Back-->
+                    </div>
+                </label>
+                <!--End Card 2-->
+
+                <!--Card 3-->
+                <input type="checkbox" id="card-3"/>
+                <label class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 card-container py-2 nopadding" for='card-3'>
+                    <div class="card-flip">
+                    <!--Card 3 Front-->
+                    <div class="card front border-0">
+                        <img src="img/spotlight/vr.jpg" class="card-img-top">
+                        <div class="card h-100">
+                            <h5 class="card-title">Reiko's Fragments</h5>
+                            <p class="card-text">
+                                In this VR vs Crowd game, the VR player must escape a haunted house, a vengeful ghost and even worse, 
+                                their friends playing as spirits who have full control over the house they're trying to escape!
+                            </p>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <small class="cardfootertext">Learn More...</small>
+                        <i class="flipcardicon fas fa-angle-right float-right"></i>
+                    </div>
+                    </div>
+                    <!--End Card 3 Front-->
+          
+                    <!--Card 3 Back-->
+                    <div class="card back">
+                        <div class="card-header">
+                            Reiko's Fragments
+                        </div>
+                        <div class="card h-100">
+                            <p class="card-text">
+                                Escape the haunted house by searching for spiritual items, but beware of traps and making too much noise— 
+                                the ghost is always listening and any sound you make could be your last.<br><br>
+                                A hair-raising experience that is best enjoyed with a group of friends. 
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <form style="display: inline" action="#" method="get">
+                                <button class="getdetailsbtn">GET DETAILS</button>
+                            </form>
+                            <i class="flipcardicon fas fa-angle-left float-right"></i>
+                        </div>
+                        </div>
+                        <!--End Card 3 Back-->
+                    </div>
+                </label>
+                <!--End Card 3-->
+
+                <!--Card 4-->
+                <input type="checkbox" id="card-4"/>
+                <label class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 card-container py-2 nopadding" for='card-4'>
+                    <div class="card-flip">
+                    <!--Card 4 Front-->
+                    <div class="card front border-0">
+                        <img src="img/spotlight/chernobyl.jpg" class="card-img-top">
+                        <div class="card h-100">
+                            <h5 class="card-title">Visit Chernobyl</h5>
+                            <p class="card-text">
+                                Chernobyl is the most famous Ukrainian phenomenon. If you plan to visit Ukraine or are already in the country, 
+                                don’t miss the most important and unique experience and site.
+                            </p>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <small class="cardfootertext">Learn More...</small>
+                        <i class="flipcardicon fas fa-angle-right float-right"></i>
+                    </div>
+                    </div>
+                    <!--End Card 4 Front-->
+          
+                    <!--Card 4 Back-->
+                    <div class="card back">
+                        <div class="card-header">
+                            Chernobyl Experience
+                        </div>
+                        <div class="card h-100">
+                            <p class="card-text">
+                                The event, which got named "the Chernobyl Disaster”, has changed the trajectory of our civilization development.
+                                <br><br> Tour the intricate ensemble of hundreds of impressive technical and cultural monuments 
+                                surrounded and engulfed by flourishing nature which has gone wild in the area.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <form style="display: inline" action="#" method="get">
+                                <button class="getdetailsbtn">GET DETAILS</button>
+                            </form>
+                            <i class="flipcardicon fas fa-angle-left float-right"></i>
+                        </div>
+                        </div>
+                        <!--End Card 4 Back-->
+                    </div>
+                </label>
+                <!--End Card 4-->
+            </div>
+
+            <br>
+
+            <!--Rides and Attractions-->
+            <div class="row col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 m-auto">
+                <h3>Rides and Attractions</h3>
+                <a href="#" id="seeallattractions">See All <i class="fa fa-angle-right"></i></a>
+            </div>       
+
+            <div id="attractioncarouselcontainer">
+                <div class="carousel slide carousel-fade col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 m-auto" 
+                id="attractioncarousel" data-ride="carousel">
+                <!--Carousel Indicators-->
+                <ol class="carousel-indicators">
+                  <li data-target="#attractioncarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#attractioncarousel" data-slide-to="1"></li>
+                  <li data-target="#attractioncarousel" data-slide-to="2"></li>
+                  <li data-target="#attractioncarousel" data-slide-to="3"></li>
+                  <li data-target="#attractioncarousel" data-slide-to="4"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div id="attractioncontainer">
+                        <div class="card border-0">
+                            <div>
+                                <img class="card-img-top" src="img/attractions/walkingdead.jpg" alt="Attraction 1">
+                                <a class="carousel-control-prev" href="#attractioncarousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="carousel-control-next" href="#attractioncarousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            
+                            <div class="card-body">
+                                <a href="#" class="card-title">The Walking Dead Attraction</a>
+                                <p class="card-text">
+                                    Die-hard fans of The Walking Dead or simply those who love a good scare 
+                                    can now live through a zombie apocalypse. 
+                                    Once a seasonal event, it has now received a major upgrade 
+                                    and a permanent year-round location near the park's entrance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <div id="attractioncontainer">
+                        <div class="card border-0">
+                            <div>
+                                <img class="card-img-top" src="img/attractions/mummy.jpg" alt="Attraction 2">
+                                <a class="carousel-control-prev" href="#attractioncarousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="carousel-control-next" href="#attractioncarousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <a href="#" class="card-title">Revenge of the Mummy</a>
+                                <p class="card-text">
+                                    Plagued on all sides by huge fireballs, swarms of scarab beetles and an army of warrior mummies, 
+                                    all in total darkness. Can you survive the awesome power of Imhotep’s curse or 
+                                    will you be entombed inside forever.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <div id="attractioncontainer">
+                        <div class="card border-0">
+                            <div>
+                                <img class="card-img-top" src="img/attractions/sslof.jpg" alt="Attraction 3">
+                                <a class="carousel-control-prev" href="#attractioncarousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="carousel-control-next" href="#attractioncarousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <a href="#" class="card-title">Super Scary Labyrinth of Fear</a>
+                                <p class="card-text">
+                                    One of the world's largest Horror attraction Attraction, 
+                                    recognized by the Guinness Book of World Records at the time of its opening for its walking distance,
+                                    which has evolved many times and given fear to over 4 million people. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <div id="attractioncontainer">
+                        <div class="card border-0">
+                            <div>
+                                <img class="card-img-top" src="img/attractions/hotel.jpg" alt="Attraction 4">
+                                <a class="carousel-control-prev" href="#attractioncarousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="carousel-control-next" href="#attractioncarousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            
+                            <div class="card-body">
+                                <a href="#" class="card-title">Hotel Universal Port</a>
+                                <p class="card-text">
+                                    This is one room where guests should probably knock on the door before entering.
+                                    Try not to freak out while you hunt for clues in the room to solve the mystery of a missing girl.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <div id="attractioncontainer">
+                        <div class="card border-0">
+                            <div>
+                                <img class="card-img-top" src="img/attractions/takabisha.jpg" alt="Attraction 5">
+                                <a class="carousel-control-prev" href="#attractioncarousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="carousel-control-next" href="#attractioncarousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            
+                            <div class="card-body">
+                                <a href="#" class="card-title">Hotel Universal Port</a>
+                                <p class="card-text">
+                                    A large roller coaster born in July 2011. All experiences such as sudden acceleration by linear motor, 
+                                    seven twists (rotations), falling sharply with a maximum drop angle of 121 degrees, 
+                                    sudden rise while looking at the sky, temporary stop in fall position, etc. 
+                                    "Takabisha - Steepest Roller Coaster".
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                
+            </div>
+            </div>
+
+            <br>
+
+            <hr class="row col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 mx-auto">
+
+            <!--Find Your Nightmare-->
+            <h3 class="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 m-auto">Find Your Nightmare</h3>
+
+            <br>
+
+            <div class="row col-xl-10 m-auto" id="nightmarecontainer">
+
+                <div class="nightmareslot col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="nightmarecard" style = "background-color: black;">
+                        <img class="nightmareimage" src="img/findyournightmare/tv.jpg">
+                        <div class="nightmareinfo">
+                            <p><a href="#">MOVIE LOVERS &#10095;</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nightmareslot col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="nightmarecard" style = "background-color: red;">
+                        <img class="nightmareimage" src="img/findyournightmare/atots.jpeg">
+                        <div class="nightmareinfo">
+                            <p><a href="#">FAMILY FUN &#10095;</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nightmareslot col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="nightmarecard" style = "background-color: darkblue;">
+                        <img class="nightmareimage" src="img/findyournightmare/saw.png">
+                        <div class="nightmareinfo">
+                            <p><a href="#">GROUP ADVENTURES &#10095;</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nightmareslot col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="nightmarecard" style = "background-color: purple;">
+                        <img class="nightmareimage" src="img/findyournightmare/skyscraper.png">
+                        <div class="nightmareinfo">
+                            <p><a href="#">THRILL SEEKERS &#10095;</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <!--Footer-->
+            <footer class="row">
+                <div class="col-xl-10 col-12 m-auto" id="footercontainer">
+
+                    <br><br>
+
+                    <!--Stay in the Know-->
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-5" id="stayintheknowimage">
+                            <img src="img/footer/stayintheknow.png">
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-7 col-7" id="stayintheknowmessage">
+                            <h4>Stay In The Know</h4>
+                            <p>When you sign up for emails, you'll get special offers, early news notifications, and so much more!</p>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12" id="stayintheknowbtn">
+                            <form style="display: inline" action="#" method="get">
+                                <button id="stayintheknowbtntext">SIGN UP</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <hr class="row">
+
+                    <!--Social Media-->
+                    <div class="row" id="socialmediacontainer">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-12" id="facebooklike">
+                            <h4>Like us on Facebook</h4>
+                            <form style="display: inline" action="#" method="get">
+                                <button id="facebooklikebtn">
+                                    <h4><i class="fas fa-thumbs-up"></i> Like</h4>  
+                                </button>
+                            </form>                
+                        </div>
+
+                        <hr class="row d-md-none" style="opacity: 0;">
+
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-12" id="socialmedia">
+                            <h4>
+                                Connect With Us
+                                <a href="https://www.facebook.com/" target=”_blank”><i class="fab fa-facebook"></i></a>                       
+                                <a href="https://twitter.com/" target=”_blank”><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/" target=”_blank”><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/" target=”_blank”><i class="fab fa-youtube"></i></a>
+                                <a href="https://web.telegram.org/" target=”_blank”><i class="fab fa-telegram-plane"></i></a>
+                                <a href="https://line.me/" target=”_blank”><i class="fab fa-line"></i></a>
+                            </h4>
+                        </div>
+
+                        
+                    </div>
+
+                    <hr class="row">
+
+                    <!--Language-->
+                    <div class="row">
+                        <div class="languagecontainer col-12">
+                            <ul class="languages nopadding">
+                                <li><h4>Español</h4></li>
+                                <li><h4>Italiano</h4></li>
+                                <li><h4>Français</h4></li>
+                                <li><h4>Português</h4></li>
+                                <li><h4>Deutsch</h4></li>
+                                <li><h4>Polski</h4></li>
+                                <li><h4>简体中文</h4></li>
+                                <li><h4>繁體中文</h4></li>
+                                <li><h4>한국어</h4></li>
+                                <li><h4>日本語</h4></li>
+                                <li><h4>தமிழ்</h4></li>
+                                <li><h4>اَلْعَرَبِيَّةُ</h4></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr class="row">
+
+                    <!--Miscellaneous-->
+                    <div class="row" id="misccontainer">
+                        <ul class="misc col-sm-4 col-12">
+                            <li><h4><a href="#">About Us</a></h4></li>
+                            <li><h4><a href="#">FAQs</a></h4></li>
+                            <li><h4><a href="#">Sign Up for Email Alerts</a></h4></li>
+                            <li><h4><a href="#">Ticket Deals</a></h4></li>
+                            <li><h4><a href="#">Jobs</a></h4></li>
+                        </ul>
+
+                        <ul class="misc col-sm-4 col-12">
+                            <li><h4><a href="#">For Groups of 10+</a></h4></li>
+                            <li><h4><a href="#">Corporate Partners</a></h4></li>
+                            <li><h4><a href="#">Youth and Education</a></h4></li>
+                            <li><h4><a href="#">Military Sales</a></h4></li>
+                            <li><h4><a href="#">Merchandise and Shops</a></h4></li>
+                        </ul>
+
+                        <ul class="misc col-sm-4 col-12">
+                            <li><h4><a href="#">Meetings and Events</a></h4></li>
+                            <li><h4><a href="#">Green is Universal</a></h4></li>
+                            <li><h4><a href="#">Community Relations</a></h4></li>
+                            <li><h4><a href="#">Media Relations</a></h4></li>
+                            <li><h4><a href="#">Safety & Travel Updates</a></h4></li>
+                        </ul>
+                    </div>
+
+                    <hr class="row">
+
+                    <!--Legal Disclaimers-->
+                    <div class="row justify-content-between" id="legalcontainer">
+                        <!--Diclaimer Message-->
+                        <div class="col-md-3 col-12" id="disclaimermessage">
+                                &#169; 2020 Horror 112. All rights reserved.
+                                Some imagery shown throughout our website does not represent current operational and safety guidelines.
+                        </div>
+
+                        <!--Legal Links-->
+                        <div class="col-md-8 col-12" id="legal">
+                            <ul class="nopadding" id="legallinks">
+                                <li><a href="#">Copyright & Trademark &#10093;</a></li>
+                                <li><a href="#">Terms of Service &#10093;</a></li>
+                                <li><a href="#">Privacy Policy &#10093;</a></li>
+                                <li><a href="#">SG Notice &#10093;</a></li>
+                                <li><a href="#">Do Not Sell My Personal Information &#10093;</a></li>
+                                <li><a href="#">Privacy Information Center &#10093;</a></li>
+                                <li><a href="#">Accessibility Information &#10093;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </footer>
+
+            <!--Bottom Footer-->
+            <div class="row bg-dark" id="bottomfooter"></div>
+        </div>
+    </body>
+
+    <script src = "js/weather.js"></script>
+    <script src = "js/navbarlogo.js"></script>
+
+</html>
