@@ -7,4 +7,4 @@ Current State: index.html fully responsive
 Font and color palette TBD
 
 # Bugs
-Navigation bar logo sometimes dissapears after constant window resizing + refreshing
+Navigation bar logo sometimes dissapears after scrolling and window resizing
