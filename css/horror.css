@@ -426,7 +426,7 @@ header a {
     border-top-right-radius: 20px;
 }
   
-input[type='checkbox'] {
+#spotlightcontainer input[type='checkbox'] {
     display: none;
 }
   
