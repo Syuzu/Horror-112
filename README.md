@@ -7,5 +7,4 @@ Current State: index.html fully responsive
 Font and color palette TBD
 
 # Bugs
-Navigation bar logo sometimes dissapears after scrolling and window resizing\
-Remember me checkbox in login modal missing (just remove?)
+Navigation bar logo sometimes dissapears after scrolling and window resizing
